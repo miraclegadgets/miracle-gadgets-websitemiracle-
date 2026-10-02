@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Miracle Gadgets & Accessories — phones, accessories, buy, sell, swap and repairs in Ikeja Computer Village, Lagos.">
+  <title>Miracle Gadgets & Accessories | Ikeja Computer Village</title>
+  <style>
+    :root{
+      --lime:#c7ff00;
+      --lime2:#9ed400;
+      --black:#070809;
+      --dark:#101214;
+      --card:#15181b;
+      --muted:#aeb4ba;
+      --white:#fff;
+      --line:rgba(255,255,255,.10);
+      --shadow:0 18px 55px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:var(--black);color:var(--white);line-height:1.55;
+    }
+    a{text-decoration:none;color:inherit}
+    img{display:block;width:100%;height:100%;object-fit:cover}
+    .container{width:min(1120px,92%);margin:auto}
+    .topbar{background:var(--lime);color:#050505;font-weight:800;text-align:center;padding:9px 15px;font-size:.9rem}
+    header{
+      position:sticky;top:0;z-index:20;background:rgba(7,8,9,.9);
+      backdrop-filter:blur(14px);border-bottom:1px solid var(--line)
+    }
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:950;letter-spacing:.5px;font-size:1.05rem}
+    .brand span{color:var(--lime)}
+    .navlinks{display:flex;gap:25px;color:#dfe3e7;font-size:.93rem}
+    .navlinks a:hover{color:var(--lime)}
+    .navcta{background:var(--lime);color:#050505;padding:11px 17px;border-radius:999px;font-weight:900}
+    .hero{padding:78px 0 55px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:center}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;color:var(--lime);font-weight:900;text-transform:uppercase;letter-spacing:2px;font-size:.76rem;margin-bottom:16px}
+    h1{font-size:clamp(2.8rem,6vw,5.8rem);line-height:.94;letter-spacing:-3px;max-width:750px}
+    h1 span{color:var(--lime)}
+    .hero p{color:var(--muted);font-size:1.08rem;max-width:610px;margin:22px 0 28px}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:12px;font-weight:900}
+    .btn-primary{background:var(--lime);color:#050505}
+    .btn-secondary{border:1px solid var(--line);background:#111416}
+    .hero-card{height:480px;border-radius:28px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);position:relative}
+    .hero-card:after{content:"";position:absolute;inset:auto 0 0;height:45%;background:linear-gradient(transparent,rgba(0,0,0,.85))}
+    .hero-label{position:absolute;z-index:2;left:22px;bottom:22px;font-weight:900}
+    .hero-label small{display:block;color:var(--lime);margin-bottom:4px}
+    section{padding:78px 0}
+    .section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:28px}
+    .section-head h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-1.5px}
+    .section-head p{color:var(--muted);max-width:500px}
+    .services{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .service{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;min-height:175px}
+    .icon{font-size:1.8rem;margin-bottom:15px}
+    .service h3{margin-bottom:7px}
+    .service p{color:var(--muted);font-size:.92rem}
+    .products{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .product{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+    .product-img{height:220px}
+    .product-body{padding:18px}
+    .tag{display:inline-block;color:var(--lime);font-size:.72rem;font-weight:900;text-transform:uppercase;letter-spacing:1px;margin-bottom:7px}
+    .product h3{font-size:1.08rem}
+    .product p{color:var(--muted);font-size:.88rem;margin:7px 0 15px}
+    .product .order{display:block;text-align:center;background:#202428;padding:10px;border-radius:10px;font-weight:900}
+    .product .order:hover{background:var(--lime);color:#050505}
+    .banner{border:1px solid var(--line);border-radius:25px;overflow:hidden;height:390px;position:relative}
+    .banner img{object-position:center}
+    .banner:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.15))}
+    .banner-copy{position:absolute;z-index:2;inset:0;display:flex;flex-direction:column;justify-content:center;padding:45px;max-width:600px}
+    .banner-copy h2{font-size:clamp(2.1rem,4vw,3.6rem);line-height:1;margin-bottom:15px}
+    .banner-copy p{color:#dfe3e7}
+    .why{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+    .why-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px}
+    .checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+    .check{padding:14px;background:#101315;border-radius:12px;color:#e8ecef}
+    .check b{color:var(--lime)}
+    .contact{background:linear-gradient(135deg,#141719,#090a0b);border:1px solid var(--line);border-radius:26px;padding:38px}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+    .contact h2{font-size:clamp(2rem,4vw,3.3rem);line-height:1}
+    .contact p{color:var(--muted);margin:15px 0 22px}
+    .contact-list{display:grid;gap:12px}
+    .contact-item{padding:15px 18px;border:1px solid var(--line);border-radius:12px;background:#0c0e0f}
+    .contact-item span{color:var(--lime);font-weight:900;margin-right:7px}
+    footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.9rem}
+    .float-wa{position:fixed;right:18px;bottom:18px;z-index:50;background:#25D366;color:#061008;border-radius:999px;padding:14px 18px;font-weight:950;box-shadow:0 10px 35px rgba(37,211,102,.25)}
+    @media(max-width:900px){
+      .hero-grid,.why,.contact-grid{grid-template-columns:1fr}
+      .hero-card{height:380px}
+      .services{grid-template-columns:repeat(2,1fr)}
+      .products{grid-template-columns:repeat(2,1fr)}
+      .navlinks{display:none}
+    }
+    @media(max-width:560px){
+      .hero{padding-top:52px}
+      h1{letter-spacing:-2px}
+      .services,.products,.checks{grid-template-columns:1fr}
+      .hero-card{height:330px}
+      .banner{height:430px}
+      .banner-copy{padding:28px}
+      .contact{padding:26px}
+      .navcta{padding:9px 12px;font-size:.85rem}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">📍 Hospital Road, Ikeja Computer Village • Lagos State, Nigeria</div>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a class="brand" href="#home">MIRACLE <span>GADGETS</span></a>
+        <div class="navlinks">
+          <a href="#services">Services</a>
+          <a href="#products">Products</a>
+          <a href="#about">Why Us</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <a class="navcta" href="https://wa.me/2348158919203?text=Hello%20Miracle%20Gadgets%2C%20I%27d%20like%20to%20make%20an%20enquiry.">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">⚡ Smarter gadgets • Better life</div>
+          <h1>Upgrade your life. <span>Stay connected.</span></h1>
+          <p>Welcome to Miracle Gadgets & Accessories — your trusted plug for phones, accessories and gadget solutions in Ikeja Computer Village.</p>
+          <div class="buttons">
+            <a class="btn btn-primary" href="#products">Explore Products</a>
+            <a class="btn btn-secondary" href="https://wa.me/2348158919203?text=Hello%20Miracle%20Gadgets%2C%20I%27m%20interested%20in%20your%20products.">Chat on WhatsApp</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img src="assets/miracle-gadgets-banner.png" alt="Miracle Gadgets and Accessories">
+          <div class="hero-label"><small>MIRACLE GADGETS & ACCESSORIES</small>Shop smart. Live better.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="eyebrow">What we do</div><h2>Everything gadget.</h2></div>
+          <p>From phones and audio devices to accessories and gadget support, we help you find the right tech for your needs.</p>
+        </div>
+        <div class="services">
+          <div class="service"><div class="icon">📱</div><h3>Phones</h3><p>New and fairly used phones, with options to suit different budgets.</p></div>
+          <div class="service"><div class="icon">🔄</div><h3>Buy • Sell • Swap</h3><p>Looking to upgrade? Ask us about buying, selling or swapping your device.</p></div>
+          <div class="service"><div class="icon">🔧</div><h3>Repairs</h3><p>Phone troubleshooting and repair support for common device issues.</p></div>
+          <div class="service"><div class="icon">🎧</div><h3>Accessories</h3><p>Headphones, speakers, chargers, cables and other everyday gadgets.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="eyebrow">Featured</div><h2>Hot picks.</h2></div>
+          <p>Availability and prices can change. Message us on WhatsApp for the current price and stock.</p>
+        </div>
+        <div class="products">
+          <article class="product">
+            <div class="product-img"><img src="assets/iphone-13-128gb.jpg" alt="iPhone 13 128GB"></div>
+            <div class="product-body"><span class="tag">iPhone</span><h3>iPhone 13 — 128GB</h3><p>Fully verified stock shown in our product photos.</p><a class="order" href="https://wa.me/2348158919203?text=Hello%20Miracle%20Gadgets%2C%20I%27m%20interested%20in%20the%20iPhone%2013%20128GB.">Ask for price</a></div>
+          </article>
+          <article class="product">
+            <div class="product-img"><img src="assets/iphone-13-colors.jpg" alt="iPhone 13 128GB and 256GB"></div>
+            <div class="product-body"><span class="tag">Available</span><h3>iPhone 13 — 128GB / 256GB</h3><p>Ask about available colours, condition and current stock.</p><a class="order" href="https://wa.me/2348158919203?text=Hello%20Miracle%20Gadgets%2C%20please%20send%20me%20the%20current%20iPhone%2013%20options.">Check stock</a></div>
+          </article>
+          <article class="product">
+            <div class="product-img"><img src="assets/bose-black.jpg" alt="Bose headphones"></div>
+            <div class="product-body"><span class="tag">Audio</span><h3>Bose Headphones</h3><p>Premium-looking headphones for music, calls and everyday listening.</p><a class="order" href="https://wa.me/2348158919203?text=Hello%20Miracle%20Gadgets%2C%20I%27m%20interested%20in%20the%20Bose%20headphones.">Ask for price</a></div>
+          </article>
+          <article class="product">
+            <div class="product-img"><img src="assets/zealot-s122.jpg" alt="Zealot S122 wireless speaker"></div>
+            <div class="product-body"><span class="tag">Speaker</span><h3>Zealot S122 Wireless Speaker</h3><p>Portable audio option for home, outings and everyday entertainment.</p><a class="order" href="https://wa.me/2348158919203?text=Hello%20Miracle%20Gadgets%2C%20I%27m%20interested%20in%20the%20Zealot%20S122%20speaker.">Ask for price</a></div>
+          </article>
+          <article class="product">
+            <div class="product-img"><img src="assets/samsung-galaxy-s23.jpg" alt="Samsung Galaxy S23 8GB 128GB"></div>
+            <div class="product-body"><span class="tag">Samsung • Available</span><h3>Samsung Galaxy S23 — 8GB / 128GB</h3><p><strong style="color:var(--white)">₦400,000</strong> • 3900mAh battery • 8GB RAM • 128GB storage.</p><a class="order" href="https://wa.me/2348158919203?text=Hello%20Miracle%20Gadgets%2C%20I%27m%20interested%20in%20the%20Samsung%20Galaxy%20S23%208GB%20128GB%20at%20N400%2C000.">Buy / Enquire</a></div>
+          </article>
+          <article class="product">
+            <div class="product-img"><img src="assets/iphone-xr-stock.jpg" alt="iPhone XR 64GB and 128GB"></div>
+            <div class="product-body"><span class="tag">iPhone • Available</span><h3>iPhone XR — 64GB / 128GB</h3><p><strong style="color:var(--white)">64GB: ₦190,000</strong><br><strong style="color:var(--white)">128GB: ₦220,000</strong></p><a class="order" href="https://wa.me/2348158919203?text=Hello%20Miracle%20Gadgets%2C%20I%27m%20interested%20in%20the%20iPhone%20XR.%20Please%20confirm%2064GB%20at%20N190%2C000%20or%20128GB%20at%20N220%2C000.">Buy / Enquire</a></div>
+          </article>
+          <article class="product">
+            <div class="product-img"><img src="assets/iphone-11-stock.jpg" alt="iPhone 11 64GB and 128GB"></div>
+            <div class="product-body"><span class="tag">iPhone • Available</span><h3>iPhone 11 — 64GB / 128GB</h3><p><strong style="color:var(--white)">64GB: ₦200,000</strong><br><strong style="color:var(--white)">128GB: ₦250,000</strong></p><a class="order" href="https://wa.me/2348158919203?text=Hello%20Miracle%20Gadgets%2C%20I%27m%20interested%20in%20the%20iPhone%2011.%20Please%20confirm%2064GB%20at%20N200%2C000%20or%20128GB%20at%20N250%2C000.">Buy / Enquire</a></div>
+          </article>
+          <article class="product">
+            <div class="product-img"><img src="assets/iphone-7-128gb.jpg" alt="iPhone 7 128GB"></div>
+            <div class="product-body"><span class="tag">iPhone • Available</span><h3>iPhone 7 — 128GB</h3><p><strong style="color:var(--white)">₦90,000</strong> • 128GB storage.</p><a class="order" href="https://wa.me/2348158919203?text=Hello%20Miracle%20Gadgets%2C%20I%27m%20interested%20in%20the%20iPhone%207%20128GB%20at%20N90%2C000.">Buy / Enquire</a></div>
+          </article>
+          <article class="product">
+            <div class="product-img"><img src="assets/iphone-17-pro-256gb.jpg" alt="iPhone 17 Pro 256GB"></div>
+            <div class="product-body"><span class="tag">iPhone • Available</span><h3>iPhone 17 Pro — 256GB</h3><p><strong style="color:var(--white)">₦1,800,000</strong> • 256GB storage.</p><a class="order" href="https://wa.me/2348158919203?text=Hello%20Miracle%20Gadgets%2C%20I%27m%20interested%20in%20the%20iPhone%2017%20Pro%20256GB%20at%20N1%2C800%2C000.">Buy / Enquire</a></div>
+          </article>
+          <article class="product">
+            <div class="product-img"><img src="assets/google-pixel-9-pro.jpg" alt="Google Pixel 9 Pro"></div>
+            <div class="product-body"><span class="tag">Google • Available</span><h3>Google Pixel 9 Pro</h3><p><strong style="color:var(--white)">₦750,000</strong> • Ask us for current storage/stock details.</p><a class="order" href="https://wa.me/2348158919203?text=Hello%20Miracle%20Gadgets%2C%20I%27m%20interested%20in%20the%20Google%20Pixel%209%20Pro%20at%20N750%2C000.">Buy / Enquire</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="banner">
+          <img src="assets/accessories.jpg" alt="Miracle Gadgets accessories">
+          <div class="banner-copy">
+            <div class="eyebrow">Your one-stop gadget hub</div>
+            <h2>Smart choices. Endless possibilities.</h2>
+            <p>Get connected with useful accessories and gadgets that fit your lifestyle. Tell us what you need and we'll help you find an option.</p>
+            <div class="buttons" style="margin-top:22px">
+              <a class="btn btn-primary" href="https://wa.me/2348158919203?text=Hello%20Miracle%20Gadgets%2C%20I%27m%20looking%20for%20an%20accessory.">Find an accessory</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container why">
+        <div class="why-card">
+          <div class="eyebrow">Why Miracle Gadgets?</div>
+          <h2>Reliable tech. Straightforward service.</h2>
+          <p style="color:var(--muted);margin-top:14px">We aim to make buying, swapping and getting support for your gadgets simple, clear and convenient.</p>
+          <div class="checks">
+            <div class="check"><b>✓</b> Quality-focused</div>
+            <div class="check"><b>✓</b> Competitive deals</div>
+            <div class="check"><b>✓</b> Helpful support</div>
+            <div class="check"><b>✓</b> Convenient WhatsApp ordering</div>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="eyebrow">Visit us</div>
+          <h2>Ikeja Computer Village</h2>
+          <p style="color:var(--muted);margin-top:14px">Find Miracle Gadgets around Hospital Road, Computer Village, Ikeja, Lagos State, Nigeria. For exact directions and current availability, message us before visiting.</p>
+          <div class="buttons" style="margin-top:22px">
+            <a class="btn btn-primary" href="https://wa.me/2348158919203?text=Hello%20Miracle%20Gadgets%2C%20please%20send%20me%20your%20exact%20location%20at%20Hospital%20Road%2C%20Ikeja%20Computer%20Village.">Get directions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact">
+          <div class="contact-grid">
+            <div>
+              <div class="eyebrow">Let's talk</div>
+              <h2>Ready to get your next gadget?</h2>
+              <p>Send us a WhatsApp message with the phone, accessory or repair service you need.</p>
+              <a class="btn btn-primary" href="https://wa.me/2348158919203?text=Hello%20Miracle%20Gadgets%2C%20I%27d%20like%20to%20make%20an%20enquiry.">Message Miracle Gadgets</a>
+            </div>
+            <div class="contact-list">
+              <div class="contact-item"><span>WhatsApp</span> 0815 891 9203</div>
+              <div class="contact-item"><span>Location</span> Hospital Road, Ikeja Computer Village, Lagos State, Nigeria</div>
+              <div class="contact-item"><span>Services</span> Phones • Accessories • Buy • Sell • Swap • Repairs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap">
+      <div>© 2026 Miracle Gadgets & Accessories. All rights reserved.</div>
+      <div>Shop smart. Live better. 💚</div>
+    </div>
+  </footer>
+
+  <a class="float-wa" href="https://wa.me/2348158919203?text=Hello%20Miracle%20Gadgets%2C%20I%27m%20interested%20in%20your%20products.">💬 WhatsApp</a>
+</body>
+</html>
